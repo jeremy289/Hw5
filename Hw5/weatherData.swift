@@ -22,6 +22,7 @@ struct detail:Codable,Identifiable {
 struct weather:Codable{
     var main: String
     var description: String
+    
 }
 struct main:Codable{
     var temp_min:Float

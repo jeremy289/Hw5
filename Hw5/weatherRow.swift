@@ -10,7 +10,7 @@ import SwiftUI
 
 struct weatherRow: View {
     var Details : detail
-
+    
     var body: some View {
         VStack {
             Text(Details.name)
