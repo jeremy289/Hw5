@@ -11,11 +11,20 @@ import SwiftUI
 struct weatherDetail: View {
     var Details: detail
     var body: some View {
-       VStack {
-            Text(Details.name)
-            Text(Details.weather[0].description)
-            Text("\(Details.main.temp_max, specifier: "%.1f")")
-            Text("\(Details.main.temp_min, specifier: "%.1f")")
+        ZStack {
+            VStack {
+                Image("\(Details.name)")
+                    .resizable()
+                    .scaledToFit()
+                    
+                Text(Details.name)
+                    
+                Text(Details.weather[0].description)
+                Text("\(Details.main.temp_max, specifier: "%.1f")")
+                Text("\(Details.main.temp_min, specifier: "%.1f")")
+            }
+            .font(.largeTitle)
+            .foregroundColor(Color.blue)
         }
         
     }
